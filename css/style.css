@@ -2,6 +2,11 @@ body{
     background-color: antiquewhite;
 }
 
+.heading{
+    text-align: center;
+    margin-top: 50px;
+}
+
 #box{
     margin-left: auto;
     margin-right: auto;
@@ -9,7 +14,8 @@ body{
     height: 60px;
     border: 2px solid;
     border-color: black;
-    margin-top: 200px;
+    margin-top: 150px;
+    display: flex;
 }
 
 #quote{
@@ -29,3 +35,35 @@ body{
     width: 60px;
 }
 
+#input{
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+#select{
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+#btn-go{
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+#answer{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+#unit{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
