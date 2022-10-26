@@ -87,3 +87,13 @@ body{
 .first-line{
     display: flex;
 }
+
+
+/* part03 */
+
+.part03{
+    height: 800px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
