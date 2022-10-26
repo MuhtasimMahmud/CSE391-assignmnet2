@@ -2,6 +2,8 @@ body{
     background-color: antiquewhite;
 }
 
+/* Quote Box */
+
 .heading{
     text-align: center;
     margin-top: 50px;
@@ -35,6 +37,9 @@ body{
     width: 60px;
 }
 
+
+/* Hero Converter */
+
 #input{
     height: 20px;
     margin-top: auto;
@@ -66,4 +71,19 @@ body{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5px;
+}
+
+
+/* Part02 */
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    height: 1000px;
+    width: 500px;
+    margin-top: 70px;
+}
+
+.first-line{
+    display: flex;
 }
