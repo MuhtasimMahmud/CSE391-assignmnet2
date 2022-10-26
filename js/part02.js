@@ -1,31 +1,63 @@
-document.getElementById("input").addEventListener("input", function(){
+//Hero Converter Min Max
 
-    var inputValues = document.getElementById("input").inputValues;
-    inputValues = inputValues.replace(/\s+/g, "");
-    var inputArray = inputValues.split(",");
-    inputArray = calculateArray.filter((n) => n);
+const chg = document.getElementById("innumb");
 
+chg.addEventListener("input", chnage);
 
-    var max = parseInt(Math.max(...inputArray));
-    document.getElementById("max").innerHTML = Math.max(
-      ...inputArray
-    );
+function chnage() {
+  //Take input and convert in to array
 
-    // console.log(Math.min(...calculateArray));
-    // document.getElementById("min").innerHTML = Math.min(
-    //   ...calculateArray
-    // );
+  var calcvalue = document.getElementById("innumb").value;
+  let calculateArray = calcvalue.split(",");
+  calculateArray = calculateArray.filter((n) => n);
 
-    // console.log(sum(calculateArray));
-    // document.getElementById("sum").innerHTML = sum(calculateArray);
+  //Call Functions
+  console.log(Math.max(...calculateArray));
+  document.getElementById("max").innerHTML = Math.max(
+    ...calculateArray
+  );
 
-    // console.log(avg(calculateArray));
-    // document.getElementById("avg").innerHTML = avg(calculateArray);
+  console.log(Math.min(...calculateArray));
+  document.getElementById("min").innerHTML = Math.min(
+    ...calculateArray
+  );
 
-    // console.log(calculateArray.reverse().join(","));
-    // document.getElementById("rev").innerHTML = calculateArray
-    //   .reverse()
-    //   .join(",");
-    // rev(calculateArray);
+  console.log(sum(calculateArray));
+  document.getElementById("sum").innerHTML = sum(calculateArray);
 
-});
+  console.log(avg(calculateArray));
+  document.getElementById("avg").innerHTML = avg(calculateArray);
+
+  console.log(calculateArray.reverse().join(","));
+  document.getElementById("rev").innerHTML = calculateArray
+    .reverse()
+    .join(",");
+  rev(calculateArray);
+}
+
+//sum
+function sum(calculateArray) {
+  var sum = 0;
+  for (var i = 0; i < calculateArray.length; i++) {
+    sum += parseFloat(calculateArray[i]);
+  }
+  return sum;
+}
+
+//Average
+function avg(calculateArray) {
+  var sum = 0;
+  for (var i = 0; i < calculateArray.length; i++) {
+    sum += parseFloat(calculateArray[i]);
+  }
+  return sum / calculateArray.length;
+}
+
+//Revarse
+function rev(calculateArray) {
+  calculateArray.reverse();
+  for (var i = 0; i < calculateArray.length; i++) {
+    calculateArray[i] = ` ${calculateArray[i]}`;
+  }
+  document.getElementById("rev").innerHTML = calculateArray;
+}
